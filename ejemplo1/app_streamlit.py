@@ -14,7 +14,8 @@ saludos = session.query(Saludo).all()
 st.title("Presentación de todos los Saludos")
 
 for saludo  in saludos:
-    st.write(saludo)
+    cadena = f"{saludo.mensaje.upper()} - {saludo.tipo.upper()}"
+    st.write(cadena)
     st.markdown("---")
 
 st.markdown("---")
